@@ -112,5 +112,6 @@ contract SimpleBank {
         to.transfer(withdrawAmount);
         balances[msg.sender] = newBalance;
         emit LogWithdrawal(to, withdrawAmount, newBalance);
+        return balances[msg.sender];
     }
 }
